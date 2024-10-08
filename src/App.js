@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min";
+import "./Index.scss";
+import './GetStartedCards.scss';
+import Banner from "./assets/components/Banner";
+import About from "./assets/components/About";
+import GetStartedCards from "./assets/components/GetStartedCards";
+import OurFeatures from "./assets/components/OurFeatures";
+import ReSellCases from "./assets/components/ReSellCases";
+import Testimonials from "./assets/components/Testimonials";
+import Faq from "./assets/components/Faq";
+import Footer from "./assets/components/Footer"
+import SignUp from "./assets/components/SignUp";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="sticky-top">
+        <Banner/>
+        <About/>
+        <GetStartedCards/>
+        <OurFeatures/>
+        <ReSellCases/>
+        < Testimonials/>
+        < Faq/>
+        < SignUp/>
+        < Footer/>
+      
+        
+      </div>
+    </>
   );
 }
 
