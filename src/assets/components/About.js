@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Fade } from "react-awesome-reveal"; // Import Fade
 import AboutImage from "../img/img3.png";
 
 const About = () => {
@@ -27,20 +28,26 @@ const About = () => {
       key={about.id}
     >
       {about.imgAb && (
-        <img src={about.imgAb} alt="About" className="img-fluid" />
+        <Fade direction="left" duration={1000} triggerOnce>
+          {/* Animation for the image from left */}
+          <img src={about.imgAb} alt="About" className="img-fluid imgtb" />
+        </Fade>
       )}
-      {about.heading && <h2>{about.heading}</h2>}
-      {about.title && <p>{about.title}</p>}
-      {about.title2 && about.title3 && (
-        <p className="pb-3 pt-2">
-          {about.title2} <span>{about.title3}</span>
-        </p>
-      )}
-      {about.title4 && (
-        <button className="btn" type="button">
-          {about.title4}
-        </button>
-      )}
+      <Fade direction="right" duration={1000} triggerOnce>
+        {/* Animation for text from right */}
+        {about.heading && <h2>{about.heading}</h2>}
+        {about.title && <p>{about.title}</p>}
+        {about.title2 && about.title3 && (
+          <p className="pb-3 pt-2">
+            {about.title2} <span>{about.title3}</span>
+          </p>
+        )}
+        {about.title4 && (
+          <button className="btn" type="button">
+            {about.title4}
+          </button>
+        )}
+      </Fade>
     </div>
   );
 
@@ -48,10 +55,6 @@ const About = () => {
     <div className="about">
       <div className="container-fluid outerAbout">
         <div className="row innerAbout">
-
-
-
-          
           {aboutTitleImages.map((about) => renderAboutContent(about))}
         </div>
       </div>

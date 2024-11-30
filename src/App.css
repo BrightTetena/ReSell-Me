@@ -19,3 +19,35 @@
   position: absolute;
   
 }
+
+
+/* Make the navbar transparent */
+.navbar {
+  background-color: transparent !important; /* Make navbar transparent */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Make the navbar-toggler transparent */
+.navbar-toggler {
+  background-color: transparent; /* Make hamburger button transparent */
+  border: none; /* Remove border */
+}
+
+/* Change the color of the hamburger icon */
+.navbar-toggler-icon {
+  background-image: none; /* Remove default icon */
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+}
+
+/* Add a custom hamburger icon */
+.navbar-toggler:after {
+  content: '☰'; /* Unicode for hamburger icon */
+  font-size: 24px; /* Adjust icon size */
+  color: white; /* Change color as needed */
+}
+
+/* Change navbar background on scroll */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background when scrolled */
+}

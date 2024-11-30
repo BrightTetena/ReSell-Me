@@ -1,0 +1,8 @@
+.search-icon.hide {
+    display: none; /* Hide the search icon when typing */
+  }
+  
+  .search-input.hide-placeholder::placeholder {
+    color: transparent; /* Make the placeholder text vanish when typing */
+  }
+  

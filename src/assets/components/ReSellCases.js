@@ -6,6 +6,7 @@ import image4 from "../img/img14.png";
 import image5 from "../img/img15.png";
 import arrow from "../img/Group 74.svg";
 import arrow1 from "../img/Group 75.png";
+import { Fade } from 'react-awesome-reveal';
 const ReSellCases = () => {
   const reTitle = {
     header: `Resellme’s Use Cases`,
@@ -58,7 +59,15 @@ const ReSellCases = () => {
   };
 
   return (
+    
     <div className="reCases">
+       <Fade 
+        direction="up"
+        duration={1500}
+        cascade
+        damping={0.1}
+        triggerOnce
+      >
       <div className="container-fluid outerReCases">
         <h2 className="pb-3">{reTitle.header}</h2>
         <div className="d-flex innerReCases " id="slider">
@@ -92,6 +101,7 @@ const ReSellCases = () => {
           <img src={arrow} alt="" className="img-fluid" />
         </button>
       </div>
+      </Fade>
     </div>
   );
 };

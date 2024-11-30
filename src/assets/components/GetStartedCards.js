@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Fade } from "react-awesome-reveal"; // Import Fade for animations
 import img from "../img/img4.png";
 import img2 from "../img/img5.png";
 import img3 from "../img/img6.png";
@@ -33,28 +34,43 @@ const GetStartedCards = () => {
       <h2>How To Get Started</h2>
       <div className="container-fluid outerGetStart text-center">
         <div className="row g-5 innerGetStart">
-          {getStarted.map((cards, index) => (
-            <div
-              className="col-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 GetStartedItems text-center "
-              key={cards.id}
-            >
-              <div className="card text-center align-items-center position-relative">
-                {/* Circle with number */}
-                <div className="circle">{index + 1}</div>
-                <img
-                  src={cards.getStartImg}
-                  alt=""
-                  className="card-img-top"
-                />
+          {getStarted.map((cards, index) => {
+            // Determine animation direction based on card position
+            const animationDirection =
+              index === 0
+                ? "left"
+                : index === 1
+                ? "up"
+                : "right";
 
-                <div className="card-body">
-                  <h5 className="card-title">{cards.title}</h5>
-                  <p className="card-text">{cards.title2}</p>
-                  <p className="card-text pt-3">{cards.title3}</p>
-                </div>
+            return (
+              <div
+                className="col-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 GetStartedItems text-center"
+                key={cards.id}
+              >
+                <Fade
+                  direction={animationDirection} // Set animation direction
+                  duration={1000}
+                  triggerOnce
+                >
+                  <div className="card text-center align-items-center position-relative">
+                    {/* Circle with number */}
+                    <div className="circle">{index + 1}</div>
+                    <img
+                      src={cards.getStartImg}
+                      alt=""
+                      className="card-img-top"
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">{cards.title}</h5>
+                      <p className="card-text">{cards.title2}</p>
+                      <p className="card-text pt-3">{cards.title3}</p>
+                    </div>
+                  </div>
+                </Fade>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
         <div className="btn mt-4" type="button">
           GET STARTED

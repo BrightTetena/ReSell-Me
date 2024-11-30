@@ -1,0 +1,5 @@
+.rounded-input {
+    border-radius: 30px; /* Makes the input field rounder */
+    padding: 10px 20px; /* Adjust padding as needed */
+    width: 300px; /* Set a specific width or use 100% for full width */
+}

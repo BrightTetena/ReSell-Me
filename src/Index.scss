@@ -3,10 +3,12 @@
 /* ------------------------------
   1. Nav & Banner
 ------------------------------ */
-body,
-html {
-  overflow-x: hidden;
+
+
+.nav-link {
+  cursor: pointer;
 }
+
 
 @font-face {
   font-family: "Cera";
@@ -33,6 +35,7 @@ header {
   nav {
     display: flex;
     align-items: center;
+    padding: 100rem;
 
     a {
       font-size: 20px;
@@ -64,28 +67,82 @@ header {
 }
 
 .navbar {
-  
-
   .nav-link {
-    color: white !important; // Override Bootstrap nav-link color
+    color: white !important;
     font-family: "Cera";
     font-size: 20px;
     font-weight: 700;
     margin: 0 15px;
 
     &:hover {
-      color: #018181 !important; // Custom hover color for links
+      color: #018181 !important;
     }
   }
 
+  .me-auto .nav-link:last-child {
+    margin-right: 100px; // Increase space after "About Us"
+  }
+
   .navbar-brand img {
-    height: 40px; // Set a custom height for the logo
+    height: 40px;
   }
 
   .navbar-toggler {
-    background-color: white; // Custom color for the toggle button
+    background-color: white;
+  }
+
+  .search-input {
+    border-radius: 20px; // Curved border for search input
+    padding-right: 35px; // Space for search icon
+
+    &::placeholder {
+      font-family: "Cera";
+      font-weight: bold;
+      color: #013d7b; // Set placeholder text color to blue
+      text-align: center;
+    }
   }
 }
+
+.navbar {
+  .nav-link {
+    color: white !important;
+    font-family: "Cera";
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 15px;
+
+    &:hover {
+      color: #018181 !important;
+    }
+  }
+
+ 
+
+add the css to my scss 
+
+  .navbar-brand img {
+    height: 40px;
+  }
+
+  .navbar-toggler {
+    background-color: white;
+  }
+
+  .search-input {
+   
+    border-radius: 20px;  // Curved border for search input
+    padding-right: 35px;  // Space for search icon
+
+    &::placeholder {
+      font-family: "Cera";
+      font-weight: bold;
+      color: #013d7b;  // Set placeholder text color to blue
+     text-align: center;
+    }
+  }
+}
+
 
 
 @media screen and (max-width: 1024px) {
@@ -196,6 +253,13 @@ header {
     .innerAbout {
       align-items: center;
       .aboutItems {
+
+.imgtb {
+padding-left:50px ;
+padding-right: 50px;
+
+}
+
         color: #013d7b;
         h2 {
           font-family: "Cera";
@@ -236,6 +300,8 @@ header {
   4. Get Started
 ------------------------------ */
 .getStarted {
+  padding-left: 40px;
+  padding-right: 40px;
   h2 {
     font-family: "Cera";
     font-weight: 900;
@@ -249,6 +315,8 @@ header {
     .innerGetStart {
       .GetStartedItems {
         .card {
+         
+          height: 60vh;
 
 .circle {
   background-color: rgb(0, 63, 116, 1);
@@ -451,11 +519,13 @@ header {
 }
 
 /* ------------------------------
-  7. Testimonial
+  6. Testimonial
 ------------------------------ */
+
 .testmonial {
   background: #011e55;
   padding: 10% 0;
+
   h2 {
     font-family: "Cera";
     font-weight: 900;
@@ -463,23 +533,29 @@ header {
     line-height: 75px;
     color: white;
   }
+
   p {
     font-family: "Avenir";
     color: white;
     font-weight: 400;
     font-size: 20px;
-    // margin-right: 100px;
   }
+
   .testimonialItem {
     overflow: hidden;
-    .d-flex{
+
+    .d-flex {
       overflow: hidden;
       scroll-behavior: smooth;
       padding-right: 50px;
+
+      
     }
+
     .card {
       background: #003f74;
       padding: 0 0 15px;
+
       .commas {
         background: #011e55;
         padding: 20px;
@@ -487,8 +563,9 @@ header {
         position: absolute;
         left: -74px;
         margin: 0px 100px 100px;
-        bottom: 130px;
+        bottom: 160px;
       }
+
       .card-body {
         padding: 10px 30px 0 30px;
 
@@ -499,6 +576,7 @@ header {
           font-size: 30px;
           margin-top: 35px;
         }
+
         h6 {
           opacity: 0.5;
           font-family: "Cera";
@@ -506,6 +584,7 @@ header {
           font-weight: 900;
           font-size: 20px;
         }
+
         .card-text {
           font-family: "Avenir";
           font-weight: 350;
@@ -515,6 +594,7 @@ header {
         }
       }
     }
+
     .content {
       display: none;
     }
@@ -524,6 +604,7 @@ header {
     }
   }
 }
+
 /* ------------------------------
   8. Faq
 ------------------------------ */
@@ -618,7 +699,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #011e55;
-  margin: 12% 0;
+  margin: 2% 0;
   width: 100%;
   .innerSignUp {
     color: #ffffff;
@@ -645,9 +726,24 @@ header {
       font-weight: 900;
       font-size: 25px;
       line-height: 31px;
+
+
+
+
     }
   }
 }
+
+.signme{
+  font-family: "Cera";
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 76px;
+  color: #013d7b;
+  text-align: center;
+  padding: 5% 0;
+}
+
 /* ------------------------------
   11. Footer
 ------------------------------ */
@@ -703,16 +799,19 @@ footer {
     .outerBanner {
       .innerBanner {
         h1 {
-          font-size: 50px;
-          padding: 0;
-          line-height: 1.2;
+          font-size: 30px;
+          
+  
+          line-height: 1;
         }
         p {
           font-family: "Avenir";
           color: white;
+          padding-left: 50px;
+          padding-right: 50px;
           font-weight: 400;
-          font-size: 29px;
-          line-height: 35px;
+          font-size: 20px;
+
         }
         .bannerButtons {
           .btn {
@@ -727,19 +826,23 @@ footer {
   }
 
   .bannerSecImg {
-    padding: 0;
+    padding: 5%;
     margin-top: -14%;
   }
   // *  About  * //
   .about {
-    padding: 20% 0;
+    padding: 20% 1;
+    
     .outerAbout {
       .innerAbout {
         align-items: center;
         .aboutItems {
           text-align: center;
           h2 {
+            padding: 10px;
             font-family: "Cera";
+            padding-left: 50px;
+            padding-right: 50px;
             font-weight: 900;
             font-size: 40px;
             line-height: 1;
@@ -748,7 +851,9 @@ footer {
             font-family: "Avenir";
             color: #013d7b;
             font-weight: 400;
-            font-size: 20px;
+            font-size: 17px;
+            padding-left: 50px;
+            padding-right: 50px;
             span {
               font-family: "AvenirBold";
             }
@@ -772,6 +877,7 @@ footer {
   .getStarted {
     h2 {
       font-size: 40px;
+      padding-bottom: 30px;
       line-height: 1;
     }
     .outerGetStart {
@@ -888,10 +994,11 @@ footer {
       }
       .card {
         background: #003f74;
-        padding: 0 0 15px;
+       margin-top: 20px;
         .commas {
           background: #d94545;
-          bottom: 156px;
+          bottom: 160px;
+          
         }
         .card-body {
           text-align: start;
@@ -970,11 +1077,14 @@ footer {
 
   .signUp {
     text-align: center;
-    padding: 60% 0;
+    padding: 6;
+    
     .innerSignUp {
       color: #ffffff;
-      padding: 10% 0;
+    ;
       h2 {
+        padding-left: 50px;
+        padding-right: 50px;
         font-family: "Cera";
         font-weight: 900;
         font-size: 40px;
@@ -984,6 +1094,8 @@ footer {
         font-family: "Avenir";
         font-weight: 400;
         font-size: 24px;
+        padding-left: 50px;
+        padding-right: 50px;
       }
       .btn {
         background-color: white;
@@ -1044,6 +1156,8 @@ footer {
           font-weight: 400;
           font-size: 29px;
           line-height: 35px;
+          padding-left: 50px;
+          padding-right: 50px;
         }
         .bannerButtons {
           .btn {
@@ -1080,6 +1194,8 @@ footer {
             color: #013d7b;
             font-weight: 400;
             font-size: 20px;
+            padding-left: 50px;
+            padding-right: 50px;
             span {
               font-family: "AvenirBold";
             }
@@ -1320,7 +1436,7 @@ footer {
   footer {
     background: #303846;
     padding: 5% 0 0 0;
-    margin-top: 10%;
+    margin-top: auto;
     .innerFooter {
       flex-direction: column;
       flex-shrink: 0;
@@ -1370,10 +1486,12 @@ footer {
           font-weight: 400;
           font-size: 29px;
           line-height: 35px;
+          padding-left: 50px;
+          padding-right: 50px;
         }
         .bannerButtons {
           .btn {
-            margin: 0 0 20px 0;
+          
           }
           button:nth-child(2) {
             padding: 10px 50px;
@@ -1406,6 +1524,8 @@ footer {
             color: #013d7b;
             font-weight: 400;
             font-size: 20px;
+            padding-left: 50px;
+            padding-right: 50px;
             span {
               font-family: "AvenirBold";
             }
@@ -1493,6 +1613,8 @@ footer {
             line-height: 1;
           }
           p {
+            padding-left: 50px;
+            padding-right: 50px;
             font-family: "Avenir";
             color: #003f74;
             font-weight: 400;
@@ -1536,6 +1658,7 @@ footer {
     text-align: center;
     h2 {
       font-size: 40px;
+      
     }
     .testimonialItem {
       .card {
@@ -1543,7 +1666,7 @@ footer {
         padding: 0 0 15px;
         .commas {
           background: #d94545;
-          bottom: 94px;
+          bottom: px;
         }
         .card-body {
           text-align: start;

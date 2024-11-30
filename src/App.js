@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min";
 import "./Index.scss";
+import "./index.css";
 import './GetStartedCards.scss';
 import Banner from "./assets/components/Banner";
 import About from "./assets/components/About";
@@ -11,6 +12,8 @@ import Testimonials from "./assets/components/Testimonials";
 import Faq from "./assets/components/Faq";
 import Footer from "./assets/components/Footer"
 import SignUp from "./assets/components/SignUp";
+import { app, analytics } from './firebase';
+
 
 
 function App() {
@@ -26,6 +29,7 @@ function App() {
         < Faq/>
         < SignUp/>
         < Footer/>
+
       
         
       </div>

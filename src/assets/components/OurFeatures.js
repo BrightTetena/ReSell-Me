@@ -3,6 +3,8 @@ import featureimg from "../img/img7.png";
 import featureimg1 from "../img/img8.png";
 import featureimg2 from "../img/img9.png";
 import featureimg3 from "../img/img10.png";
+import { Fade } from 'react-awesome-reveal';
+
 const OurFeatures = () => {
   const featureTitles = {
     heading: `Resellme’s Features`,
@@ -37,7 +39,16 @@ const OurFeatures = () => {
     },
   ]);
   return (
+    
+     
     <div className="ourFeatures">
+       <Fade 
+        direction="up"
+        duration={1500}
+        cascade
+        damping={0.1}
+        triggerOnce
+      >
       <div className="container-fluid outerFeatures">
         <div className="row innerFeatures">
           <div className="col-12 col-md-12 col-lg-12 col-xl-6 col xxl-6 featuresItems">
@@ -61,7 +72,9 @@ const OurFeatures = () => {
           </div>
         </div>
       </div>
+      </Fade>
     </div>
+    
   );
 };
 

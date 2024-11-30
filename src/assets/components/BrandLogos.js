@@ -23,21 +23,25 @@ const BrandLogos = () => {
   ]);
 
   const slideLeft = () => {
-    const slider = document.getElementById("slider");
+    const slider = document.getElementById("slider3");
     slider.scrollLeft = slider.scrollLeft - 350;
   };
 
   const slideRight = () => {
-    const slider = document.getElementById("slider");
+    const slider = document.getElementById("slider3");
     slider.scrollBy({ left: 350, behavior: "smooth" });
   };
+
+
+
+
 
   return (
     <>
       <div className="logos">
         <div className="content-tabs container-fluid outerLogos">
           <div className="innerLogos">
-            <div className="d-flex logoImgs" id="slider">
+            <div className="d-flex logoImgs" id="slider3">
               {logos.map((images) => (
                 <div className="col-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3" key={images.id}>
                   <div className="card justify-content-center mx-2">

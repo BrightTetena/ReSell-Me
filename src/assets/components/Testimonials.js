@@ -4,8 +4,8 @@ import img2 from "../img/img17.png";
 import img3 from "../img/img18.png";
 import img4 from "../img/Group 3.png";
 import img5 from "../img/img16.png";
-import arrow from "../img/Arrow1.png";
-import arrow1 from "../img/Arrow2.png";
+import arrow from "../img/right.png";
+import arrow1 from "../img/left.png";
 
 const Testimonials = () => {
   const [toggleState, setToggleState] = useState(1);
@@ -78,12 +78,12 @@ const Testimonials = () => {
   ]);
 
   const slideLeft = () => {
-    const slider = document.getElementById("slider");
+    const slider = document.getElementById("slider2");
     slider.scrollLeft -= slider.clientWidth; // Adjusted to use clientWidth for smoother scrolling
   };
 
   const slideRight = () => {
-    const slider = document.getElementById("slider");
+    const slider = document.getElementById("slider2");
     slider.scrollLeft += slider.clientWidth; // Adjusted to use clientWidth for smoother scrolling
   };
 
@@ -94,35 +94,49 @@ const Testimonials = () => {
           <div className="col-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 testimonialItem">
             <h2>{testmonHead.title}</h2>
             <p>{testmonHead.title2}</p>
-            <div className="d-flex">
-              <button
-                className="tabs active-tabs btn rounded-circle border-2 border border-light mx-3"
-                onClick={slideLeft}
-                type="button"
-                aria-label="Left"
-              >
-                <img src={arrow1} alt="" className="img-fluid" />
-              </button>
-              <button
-                className="tabs active-tabs rounded-circle border border-2 border-light btn mx-3"
-                onClick={slideRight}
-                type="button"
-                aria-label="Right"
-              >
-                <img src={arrow} alt="" className="img-fluid" />
-              </button>
-            </div>
+            <div className="d-flex"></div>
+
+            <div className="d-flex justify-content-center mt-3">
+  <button
+    className="tabs active-tabs btn ms-0" // Decreased margin for closer spacing
+    onClick={slideLeft}
+    type="button"
+    aria-label="Left"
+  >
+    <img src={arrow1} alt="Left arrow" className="img-fluid" />
+  </button>
+  <button
+    className="tabs active-tabs btn ms-0 " // Decreased margin for closer spacing
+    onClick={slideRight}
+    type="button"
+    aria-label="Right"
+  >
+    <img src={arrow} alt="Right arrow" className="img-fluid" />
+  </button>
+</div>
+
           </div>
 
           <div className="col-12 col-md-12 col-lg-8 col-xl-6 col-xxl-6 testimonialItem">
             <div>
-              <div className="d-flex overflow-hidden" id="slider" style={{ scrollBehavior: 'smooth' }}>
+              <div
+                className="d-flex overflow-hidden"
+                id="slider2"
+                style={{ scrollBehavior: "smooth" }}
+              >
                 {testmonCards.map((testmony) => (
-                  <div className="col-12 col-md-6 col-lg-6 col-xl-8 col-xxl-8" key={testmony.id}>
+                  <div
+                    className="col-12 col-md-6 col-lg-6 col-xl-8 col-xxl-8"
+                    key={testmony.id}
+                  >
                     <div className="card mx-1">
                       <img src={testmony.image} alt="" className="img-fluid" />
                       <div className="commas rounded-circle">
-                        <img src={testmony.image2} alt="" className="img-fluid" />
+                        <img
+                          src={testmony.image2}
+                          alt=""
+                          className="img-fluid"
+                        />
                       </div>
                       <div className="card-body">
                         <h5 className="card-title">{testmony.title}</h5>
